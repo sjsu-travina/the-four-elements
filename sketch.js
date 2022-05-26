@@ -51,11 +51,12 @@ function setup() {
   // fill('#248DE4');
   // rect(298, 295, 200, 50, 50);
 
+  push();
   fill('#FAF8F5');
   textAlign (CENTER, TOP);
   textSize(60);
   text("The Four Elements", 660, 200)
-
+  pop();
 
   fill('#FAF8F5');
   textAlign (CENTER, TOP);
