@@ -55,7 +55,7 @@ function setup() {
   fill('#FAF8F5');
   textAlign (CENTER, TOP);
   textSize(60);
-  text("The Four Elements", 700, 200)
+  text("The Four Elements", 660, 200)
   pop();
 
   fill('#FAF8F5');
