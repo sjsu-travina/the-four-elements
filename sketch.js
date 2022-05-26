@@ -18,8 +18,8 @@ let descript = [{
   element: "This element is closely linked to Air. In order for Fire to exist this element is made up from a rapid chemical reaction between oxygen, fuel and heat. This allows Fire to create sources of light, heat, and smoke."
 }, {
   element: "(or Air) is considered the “pure” element as though it is made up of gases; primarily of nitrogen and oxygen. As the Air is another life source for the human body, we inhale oxygen and exhale carbon dioxide  – which plants need to manufacture their food through photosynthesis."
-  
-  
+
+
 }]
 let randomIndex;
 let animating = false;
@@ -35,7 +35,7 @@ function preload() {
   for (let i = 0; i <= 3; i++){
     e_images[i] = loadImage("assets/Element_" + i + ".jpg")
   }
-  
+
   for (let i = 0; i <= 3; i++){
     backgd[i] = loadImage("assets/background_" + i + ".jpg")
   }
@@ -50,17 +50,23 @@ function setup() {
   // noStroke();
   // fill('#248DE4');
   // rect(298, 295, 200, 50, 50);
-  
+
   fill('#FAF8F5');
   textAlign (CENTER, TOP);
   textSize(60);
-  text("The Four Elements", 550, 200)
-  
+  text("The Four Elements", 660, 200)
+
+
+  fill('#FAF8F5');
+  textAlign (CENTER, TOP);
+  textSize(30);
+  text('Click below to learn about the Elements!', 660, 520)
+
   fill('#FAF8F5');
   textAlign (CENTER, TOP);
   textSize(20);
-  text("Travina Torres", 550, 300)
-  
+  text("Travina Torres", 660, 300)
+
   // textAlign(CENTER, CENTER);
   // textSize(25);
   // text("Click to view", 400, 320);
@@ -77,45 +83,45 @@ function draw() {
 function randomizer(){
    animating = false;
    if (elements[0]) {
-     
+
     // display of random names & images
     background(random(200, 255));
     randomIndex = int(random(elements.length), random(e_images.length), random(backgd.length), random(descript.length));
-    
+
     imageMode(CENTER);
-    image(backgd[randomIndex], 800, 200, 1650, 725);
-    
+    image(backgd[randomIndex], 800, 300, 1650, 725);
+
     noStroke();
     fill('#FFFFFF');
-    rect(437, 133, 225, 235, 50);
-     
+    rect(548, 133, 225, 235, 50);
+
     imageMode(CENTER);
-    image(e_images[randomIndex], 550, 250, 200, 200);
-     
+    image(e_images[randomIndex], 660, 250, 200, 200);
+
     textSize(50)
     textAlign(CENTER, CENTER);
-    text(elements[randomIndex].name, 550, 100);
-    
+    text(elements[randomIndex].name, 660, 100);
+
 //     noStroke();
 //     fill('#248DE4');
 //     rect(355, 387, 90, 35, 50);
-    
+
 //     fill('#FAF8F5');
 //     textAlign(CENTER, CENTER);
 //     textSize(18);
 //     text("Click", 400, 405);
-     
+
     noStroke();
     fill('#FFFFFF');
-    rect(205, 400, 700, 100, 50);
-     
+    rect(310, 400, 700, 100, 50);
+
     textSize(15)
     fill(10);
-    text(descript[randomIndex].element, 230, 432, 650); 
+    text(descript[randomIndex].element, 335, 432, 650);
    }
 }
 function buttonPressed() {
   animating = true;
   setTimeout(randomizer, 0);
-  
+
 }
